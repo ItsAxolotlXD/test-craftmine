@@ -46,7 +46,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose })
           <button
             onMouseDown={() => playPopSound()}
             onClick={onClose}
-            className="w-6 h-6 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-pointer btn-press-effect"
+            className="w-6 h-6 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-default btn-press-effect"
             title="Close"
           >
             ✕

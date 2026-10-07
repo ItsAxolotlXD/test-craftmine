@@ -139,7 +139,7 @@ export const VplayTab: React.FC<VplayTabProps> = ({
       onTouchCancel={() => setIsPressed(false)}
       className={`
         relative px-2 sm:px-3 py-2 min-w-[75px] sm:min-w-[110px] max-w-full flex items-center justify-center text-center font-minecraft-seven text-xs sm:text-sm select-none
-        border-2 ${isActive ? 'border-white z-20 shadow-[0_0_0_1px_#ffffff]' : 'border-[#141414]'} rounded-none outline-none cursor-pointer btn-press-effect transition-colors duration-75 overflow-hidden
+        border-2 ${isActive || isHovered ? 'border-white z-20 outline outline-2 outline-white -outline-offset-2' : 'border-[#141414]'} rounded-none cursor-default btn-press-effect overflow-hidden
         ${stateClass} ${transformClass} ${className}
       `}
     >

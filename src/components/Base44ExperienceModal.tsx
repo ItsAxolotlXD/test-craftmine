@@ -40,7 +40,7 @@ export const Base44ExperienceModal: React.FC<Base44ExperienceModalProps> = ({
             type="button"
             onMouseDown={() => playPopSound()}
             onClick={handleClose}
-            className="w-5 h-5 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-pointer btn-press-effect"
+            className="w-5 h-5 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-default btn-press-effect"
             title="Close"
           >
             ✕

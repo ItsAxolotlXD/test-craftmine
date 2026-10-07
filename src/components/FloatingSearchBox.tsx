@@ -362,10 +362,10 @@ export const FloatingSearchBox: React.FC<FloatingSearchBoxProps> = ({
         <div className="bg-[#292b2d] border-b-2 border-[#141414] p-2.5 sm:p-3 flex items-center gap-2">
           <div className="relative flex-1 flex items-center">
             <img
-              src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+              src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
               alt="Search"
               referrerPolicy="no-referrer"
-              className="absolute left-2.5 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated] filter brightness-0 invert opacity-80"
+              className="absolute left-2.5 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated]"
               style={{ imageRendering: 'pixelated' }}
             />
             <input
@@ -381,7 +381,7 @@ export const FloatingSearchBox: React.FC<FloatingSearchBoxProps> = ({
                 type="button"
                 onMouseDown={() => playPopSound()}
                 onClick={() => setQuery('')}
-                className="absolute right-2 text-gray-300 hover:text-white text-xs px-1 cursor-pointer font-bold z-10"
+                className="absolute right-2 text-gray-300 hover:text-white text-xs px-1 cursor-default font-bold z-10"
                 title="Clear query"
               >
                 ✕
@@ -394,7 +394,7 @@ export const FloatingSearchBox: React.FC<FloatingSearchBoxProps> = ({
             type="button"
             onMouseDown={() => playPopSound()}
             onClick={onClose}
-            className="w-9 h-9 mc-button-normal border-2 border-[#141414] flex items-center justify-center cursor-pointer btn-press-effect flex-shrink-0"
+            className="w-9 h-9 mc-button-normal border-2 border-[#141414] flex items-center justify-center cursor-default btn-press-effect flex-shrink-0"
             title="Close search (Esc)"
           >
             <X className="w-4 h-4 text-[#313131]" />
@@ -421,10 +421,11 @@ export const FloatingSearchBox: React.FC<FloatingSearchBoxProps> = ({
                   className="flex items-center justify-center gap-2"
                 >
                   <img
-                    src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+                    src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
                     alt="Search"
                     referrerPolicy="no-referrer"
-                    className="w-5 h-5 object-contain filter brightness-0 inline-block mr-1.5"
+                    className="w-4.5 h-4.5 object-contain inline-block mr-1.5 [image-rendering:pixelated]"
+                    style={{ imageRendering: 'pixelated' }}
                   />
                   <span>Refine search</span>
                 </VplaySecondaryButton>
@@ -437,7 +438,7 @@ export const FloatingSearchBox: React.FC<FloatingSearchBoxProps> = ({
                 key={item.id}
                 onMouseDown={() => playPopSound()}
                 onClick={() => handleSelect(item)}
-                className="mc-button-dark w-full p-2.5 text-left cursor-pointer flex flex-col gap-1 select-none btn-press-effect"
+                className="mc-button-dark w-full p-2.5 text-left cursor-default flex flex-col gap-1 select-none btn-press-effect"
               >
                 <div className="flex items-center justify-between gap-2 w-full">
                   <span className="text-xs font-minecraft-ten truncate">

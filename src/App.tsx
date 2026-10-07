@@ -194,13 +194,6 @@ export default function App() {
                 ) : (
                   /* HOME DASHBOARD VIEW */
                   <div className="space-y-4">
-                    {/* YELLOW TIP PANEL BANNER */}
-                    <div className="relative w-full bg-[#ffe866] overflow-hidden select-none border-2 border-[#141414] shadow-md">
-                      <div className="relative z-10 py-1.5 px-3 text-center text-[#141414] font-minecraft-seven text-xs">
-                        ⭐ The Craftmine — An unofficial Minecraft project with Ore UI Design System. The Craftmine is coming soon. Stay tuned!
-                      </div>
-                    </div>
-
                     {/* SLIDING BANNER */}
                     <HomeBannerSlider
                       reduceMotion={settings.reduceMotion}
@@ -230,7 +223,7 @@ export default function App() {
                             triggerTabLoading();
                             setSidebarItem('play_craftmine');
                           }}
-                          className="mc-button-normal border-2 border-[#141414] px-2.5 py-1 text-xs font-minecraft-seven cursor-pointer btn-press-effect flex items-center justify-center"
+                          className="mc-button-normal border-2 border-[#141414] px-2.5 py-1 text-xs font-minecraft-seven cursor-default btn-press-effect flex items-center justify-center"
                         >
                           <span className="-translate-y-[1px]">Play Now</span>
                         </button>
@@ -251,7 +244,7 @@ export default function App() {
                                 setSidebarItem('play_craftmine');
                               }
                             }}
-                            className="group relative bg-[#3f4246] hover:bg-[#484c50] border-2 border-[#141414] hover:border-[#89dc69] cursor-pointer transition-all duration-150 flex flex-col justify-between overflow-hidden shadow-md select-none btn-press-effect p-3.5 space-y-3"
+                            className="group relative bg-[#3f4246] hover:bg-[#484c50] border-2 border-[#141414] hover:border-white hover:outline hover:outline-2 hover:outline-white hover:-outline-offset-2 cursor-default flex flex-col justify-between overflow-hidden shadow-md select-none btn-press-effect p-3.5 space-y-3"
                           >
                             <div className="absolute inset-0 pointer-events-none z-20 shadow-[inset_2px_2px_0_rgba(255,255,255,0.25),inset_-2px_-4px_0_rgba(0,0,0,0.5)]" />
 
@@ -307,7 +300,7 @@ export default function App() {
                         setTargetArticleId('snapshot-26w04-base');
                         setSidebarItem('release_notes');
                       }}
-                      className="group relative bg-[#2a2d30] hover:bg-[#32363a] border-2 border-[#89dc69] p-4 sm:p-5 shadow-xl cursor-pointer select-none btn-press-effect flex flex-col sm:flex-row items-center justify-between gap-4 overflow-hidden"
+                      className="group relative bg-[#2a2d30] hover:bg-[#32363a] border-2 border-[#89dc69] hover:border-white hover:outline hover:outline-2 hover:outline-white hover:-outline-offset-2 p-4 sm:p-5 shadow-xl cursor-default select-none btn-press-effect flex flex-col sm:flex-row items-center justify-between gap-4 overflow-hidden"
                     >
                       <div className="absolute inset-0 pointer-events-none z-20 shadow-[inset_2px_2px_0_rgba(255,255,255,0.2),inset_-2px_-3px_0_rgba(0,0,0,0.5)]" />
 

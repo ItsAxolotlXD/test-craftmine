@@ -141,10 +141,10 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
       <div className="w-full select-none">
         <div className="relative flex items-center w-full">
           <img
-            src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+            src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
             alt="Search Icon"
             referrerPolicy="no-referrer"
-            className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated] filter brightness-0 invert opacity-80"
+            className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated]"
             style={{ imageRendering: 'pixelated' }}
           />
           <input
@@ -184,7 +184,7 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
               <button
                 onMouseDown={() => playPopSound()}
                 onClick={() => onPlayEdition(selectedArticle.editionId!)}
-                className="flex items-center gap-1.5 bg-[#418a28] hover:bg-[#52a634] text-white px-3 py-1.5 border-2 border-[#141414] text-xs font-minecraft-ten cursor-pointer shadow-[inset_1px_1px_0_#89dc69]"
+                className="flex items-center gap-1.5 bg-[#418a28] hover:bg-[#52a634] text-white px-3 py-1.5 border-2 border-[#141414] text-xs font-minecraft-ten cursor-default shadow-[inset_1px_1px_0_#89dc69]"
               >
                 <Play className="w-3.5 h-3.5 fill-current" />
                 <span>PLAY BASE44 EDITION NOW</span>
@@ -242,7 +242,7 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
 
                 <div className="space-y-2.5 pl-2 sm:pl-3">
                   {selectedArticle.features.map((cat, idx) => (
-                    <div key={idx} className="space-y-1.5 bg-[#25272a] p-3 border border-[#141414]">
+                    <div key={idx} className="space-y-1.5 bg-[#323436] p-3 border border-[#141414]">
                       <h3 className="text-xs sm:text-sm text-[#89dc69] font-minecraft-ten uppercase tracking-wider flex items-center gap-1.5">
                         <span>{cat.category}</span>
                       </h3>
@@ -308,7 +308,7 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
               <button
                 onMouseDown={() => playPopSound()}
                 onClick={handleBackToList}
-                className="mc-button-normal border-2 border-[#141414] px-4 py-2 text-xs font-minecraft-seven cursor-pointer btn-press-effect flex items-center justify-center"
+                className="mc-button-normal border-2 border-[#141414] px-4 py-2 text-xs font-minecraft-seven cursor-default btn-press-effect flex items-center justify-center"
               >
                 <span className="-translate-y-[1px]">← Back to list</span>
               </button>
@@ -363,10 +363,11 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
                   className="flex items-center justify-center gap-2"
                 >
                   <img
-                    src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+                    src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
                     alt="Search"
                     referrerPolicy="no-referrer"
-                    className="w-5 h-5 object-contain filter brightness-0 inline-block mr-1.5"
+                    className="w-4.5 h-4.5 object-contain inline-block mr-1.5 [image-rendering:pixelated]"
+                    style={{ imageRendering: 'pixelated' }}
                   />
                   <span>Refine search</span>
                 </VplaySecondaryButton>
@@ -382,8 +383,8 @@ export const ReleaseNotesView: React.FC<ReleaseNotesViewProps> = ({
                     onMouseDown={() => playPopSound()}
                     onClick={() => handleSelectArticle(article.id)}
                     className={`
-                      group relative bg-[#313437] hover:bg-[#393d41] border-2 cursor-pointer transition-all duration-150 p-4 sm:p-5 shadow-lg select-none btn-press-effect overflow-hidden
-                      ${isLatest ? 'border-[#89dc69]' : 'border-[#141414] hover:border-[#89dc69]'}
+                      group relative bg-[#313437] hover:bg-[#393d41] border-2 cursor-default hover:border-white hover:outline hover:outline-2 hover:outline-white hover:-outline-offset-2 p-4 sm:p-5 shadow-lg select-none btn-press-effect overflow-hidden
+                      ${isLatest ? 'border-[#89dc69]' : 'border-[#141414]'}
                     `}
                   >
                     {/* 3D bevel overlay */}

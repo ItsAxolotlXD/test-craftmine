@@ -100,10 +100,10 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       <div className="p-3 sm:p-4 bg-[#35383b]">
         <div className="relative flex items-center w-full">
           <img
-            src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+            src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
             alt="Search Icon"
             referrerPolicy="no-referrer"
-            className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated] filter brightness-0 invert opacity-80"
+            className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated]"
             style={{ imageRendering: 'pixelated' }}
           />
           <input
@@ -134,7 +134,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
         matchesSearch('Reduce motion') ||
         matchesSearch('INTERFACE & CUSTOMIZATION')) && (
         <div>
-          <div className="px-3 sm:px-4 py-2 bg-[#3d4043]">
+          <div className="px-3 sm:px-4 py-2 bg-[#323436] border-b-2 border-[#141414]">
             <h3 className="text-xs uppercase text-gray-200 font-minecraft-seven">
               INTERFACE & CUSTOMIZATION
             </h3>
@@ -247,7 +247,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
       {(matchesSearch('Sign in with Craftmine account') ||
         matchesSearch('ACCOUNT')) && (
         <div>
-          <div className="px-3 sm:px-4 py-2 bg-[#3d4043]">
+          <div className="px-3 sm:px-4 py-2 bg-[#323436] border-b-2 border-[#141414]">
             <h3 className="text-xs uppercase text-gray-200 font-minecraft-seven">
               ACCOUNT
             </h3>
@@ -293,7 +293,7 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
         matchesSearch('Reset settings to default') ||
         matchesSearch('DEVELOPER OPTIONS')) && (
         <div>
-          <div className="px-3 sm:px-4 py-2 bg-[#3d4043]">
+          <div className="px-3 sm:px-4 py-2 bg-[#323436] border-b-2 border-[#141414]">
             <h3 className="text-xs uppercase text-gray-200 font-minecraft-seven">
               DEVELOPER OPTIONS
             </h3>

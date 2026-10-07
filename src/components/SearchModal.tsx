@@ -311,7 +311,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           <button
             onMouseDown={() => playPopSound()}
             onClick={onClose}
-            className="w-6 h-6 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-pointer btn-press-effect"
+            className="w-6 h-6 mc-button-normal border-2 border-[#141414] text-[#313131] text-xs flex items-center justify-center cursor-default btn-press-effect"
             title="Close"
           >
             ✕
@@ -323,10 +323,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           {/* SEARCH INPUT BAR */}
           <div className="relative flex items-center w-full flex-shrink-0">
             <img
-              src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+              src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
               alt="Search Icon"
               referrerPolicy="no-referrer"
-              className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated] filter brightness-0 invert opacity-80"
+              className="absolute left-3 w-4.5 h-4.5 object-contain pointer-events-none z-10 [image-rendering:pixelated]"
               style={{ imageRendering: 'pixelated' }}
             />
             <input
@@ -335,13 +335,13 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               placeholder="Search..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="mc-search-box w-full h-10 pl-10 pr-9 text-xs sm:text-sm font-minecraft-seven transition-colors focus:border-white cursor-text"
+              className="mc-search-box w-full h-10 pl-10 pr-9 text-xs sm:text-sm font-minecraft-seven focus:border-white cursor-text"
             />
             {query && (
               <button
                 onMouseDown={() => playPopSound()}
                 onClick={() => setQuery('')}
-                className="absolute right-3 text-gray-300 hover:text-white text-xs px-1 cursor-pointer font-bold z-10"
+                className="absolute right-3 text-gray-300 hover:text-white text-xs px-1 cursor-default font-bold z-10"
               >
                 ✕
               </button>
@@ -364,7 +364,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   onMouseDown={() => playPopSound()}
                   onClick={() => setActiveFilter(tab.id as any)}
                   className={`
-                    px-2.5 py-1 border-2 ${isSelected ? 'border-white z-10' : 'border-[#141414]'} cursor-pointer flex-shrink-0 font-minecraft-seven text-xs btn-press-effect
+                    px-2.5 py-1 border-2 ${isSelected ? 'border-white z-10' : 'border-[#141414]'} cursor-default flex-shrink-0 font-minecraft-seven text-xs btn-press-effect
                     mc-button-normal
                   `}
                 >
@@ -392,7 +392,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                   key={item.id}
                   onMouseDown={() => playPopSound()}
                   onClick={() => handleSelect(item)}
-                  className="mc-button-dark w-full p-2.5 sm:p-3 text-left cursor-pointer flex items-center justify-between gap-3 shadow-md btn-press-effect"
+                  className="mc-button-dark w-full p-2.5 sm:p-3 text-left cursor-default flex items-center justify-between gap-3 shadow-md btn-press-effect"
                 >
                   <div className="flex items-start gap-3 min-w-0">
                     <div className="w-8 h-8 bg-[#18191a] border border-[#141414] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-inner">
@@ -436,7 +436,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           <button
             onMouseDown={() => playPopSound()}
             onClick={onClose}
-            className="w-full h-10 mc-button-normal border-2 border-[#141414] text-sm font-minecraft-seven flex items-center justify-center cursor-pointer btn-press-effect"
+            className="w-full h-10 mc-button-normal border-2 border-[#141414] text-sm font-minecraft-seven flex items-center justify-center cursor-default btn-press-effect"
           >
             Close
           </button>

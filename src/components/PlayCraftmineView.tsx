@@ -132,7 +132,7 @@ export const PlayCraftmineView: React.FC<PlayCraftmineViewProps> = ({ initialEdi
             target="_blank"
             rel="noopener noreferrer"
             onMouseDown={() => playPopSound()}
-            className="flex items-center gap-2 bg-[#89dc69] hover:bg-[#9ded7e] text-[#141414] font-minecraft-ten text-xs px-3.5 py-1.5 border-2 border-[#141414] shadow-[inset_1px_1px_0_#ffffff] transition-all cursor-pointer flex-shrink-0 active:translate-y-[1px]"
+            className="flex items-center gap-2 bg-[#89dc69] hover:bg-[#9ded7e] text-[#141414] font-minecraft-ten text-xs px-3.5 py-1.5 border-2 border-[#141414] shadow-[inset_1px_1px_0_#ffffff] cursor-default flex-shrink-0 active:translate-y-[1px]"
           >
             <span>Open Original Page</span>
             <ExternalLink className="w-3.5 h-3.5" />
@@ -149,9 +149,9 @@ export const PlayCraftmineView: React.FC<PlayCraftmineViewProps> = ({ initialEdi
                 onMouseDown={() => playPopSound()}
                 onClick={() => handleSelectEdition(edition)}
                 className={`
-                  relative p-2.5 sm:p-3 text-left border-2 cursor-pointer transition-all duration-100 flex flex-col justify-between overflow-hidden select-none btn-press-effect
+                  relative p-2.5 sm:p-3 text-left border-2 cursor-default flex flex-col justify-between overflow-hidden select-none btn-press-effect
                   ${isSelected
-                    ? 'bg-[#292b2d] border-[#89dc69] shadow-[inset_2px_2px_0_rgba(255,255,255,0.2)]'
+                    ? 'bg-[#292b2d] border-white shadow-[inset_2px_2px_0_rgba(255,255,255,0.2)]'
                     : 'bg-[#3e4246] hover:bg-[#484c50] border-[#141414]'
                   }
                 `}
@@ -216,7 +216,7 @@ export const PlayCraftmineView: React.FC<PlayCraftmineViewProps> = ({ initialEdi
               onMouseDown={() => playPopSound()}
               onClick={handleReloadFrame}
               title="Reload game"
-              className="mc-button-normal border-2 border-[#141414] px-2 py-1 cursor-pointer flex items-center gap-1 text-[11px] btn-press-effect"
+              className="mc-button-normal border-2 border-[#141414] px-2 py-1 cursor-default flex items-center gap-1 text-[11px] btn-press-effect"
             >
               <RotateCw className="w-3.5 h-3.5 text-[#313131]" />
               <span className="hidden sm:inline text-[#313131] -translate-y-[0.5px]">Reload</span>
@@ -226,7 +226,7 @@ export const PlayCraftmineView: React.FC<PlayCraftmineViewProps> = ({ initialEdi
               onMouseDown={() => playPopSound()}
               onClick={handleToggleFullscreen}
               title="Fullscreen"
-              className="mc-button-normal border-2 border-[#141414] px-2 py-1 cursor-pointer flex items-center gap-1 text-[11px] btn-press-effect"
+              className="mc-button-normal border-2 border-[#141414] px-2 py-1 cursor-default flex items-center gap-1 text-[11px] btn-press-effect"
             >
               <Maximize2 className="w-3.5 h-3.5 text-[#313131]" />
               <span className="hidden sm:inline text-[#313131] -translate-y-[0.5px]">Fullscreen</span>
@@ -238,7 +238,7 @@ export const PlayCraftmineView: React.FC<PlayCraftmineViewProps> = ({ initialEdi
               rel="noopener noreferrer"
               onMouseDown={() => playPopSound()}
               title="Open in new tab"
-              className="mc-button-normal border-2 border-[#141414] px-2.5 py-1 cursor-pointer flex items-center gap-1 text-[11px] btn-press-effect font-minecraft-seven text-[#313131]"
+              className="mc-button-normal border-2 border-[#141414] px-2.5 py-1 cursor-default flex items-center gap-1 text-[11px] btn-press-effect font-minecraft-seven text-[#313131]"
             >
               <ExternalLink className="w-3.5 h-3.5 text-[#313131]" />
               <span className="-translate-y-[0.5px]">New Tab</span>

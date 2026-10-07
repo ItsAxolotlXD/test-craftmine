@@ -50,7 +50,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           onTouchStart={handlePrevTab}
           title="Previous Tab"
           aria-label="Previous Tab"
-          className="flex sm:hidden items-center justify-center mc-button-normal font-minecraft-seven text-xs px-2.5 py-2 border-2 border-[#141414] flex-shrink-0 cursor-pointer z-10 btn-press-effect"
+          className="flex sm:hidden items-center justify-center mc-button-normal font-minecraft-seven text-xs px-2.5 py-2 border-2 border-[#141414] flex-shrink-0 cursor-default z-10 btn-press-effect"
         >
           [
         </button>
@@ -85,7 +85,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           onTouchStart={handleNextTab}
           title="Next Tab"
           aria-label="Next Tab"
-          className="flex sm:hidden items-center justify-center mc-button-normal font-minecraft-seven text-xs px-2.5 py-2 border-2 border-[#141414] flex-shrink-0 cursor-pointer z-10 btn-press-effect"
+          className="flex sm:hidden items-center justify-center mc-button-normal font-minecraft-seven text-xs px-2.5 py-2 border-2 border-[#141414] flex-shrink-0 cursor-default z-10 btn-press-effect"
         >
           ]
         </button>

@@ -46,7 +46,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           onTouchStart={handleBackPress}
           onClick={onBack}
           aria-label="Back"
-          className="p-1 hover:bg-[#323538] active:bg-[#1a1b1d] btn-press-effect text-white cursor-pointer rounded-none flex items-center justify-center transition-colors"
+          className="p-1 hover:bg-[#323538] active:bg-[#1a1b1d] btn-press-effect text-white cursor-default rounded-none flex items-center justify-center"
           title="Back"
         >
           <img
@@ -78,16 +78,17 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           onTouchStart={handleSearchPress}
           aria-label="Universal Search"
           aria-expanded={isSearchOpen}
-          className={`p-1 hover:bg-[#323538] active:bg-[#1a1b1d] btn-press-effect text-white cursor-pointer rounded-none flex items-center justify-center transition-colors ${
-            isSearchOpen ? 'bg-[#323538] ring-2 ring-[#418a28]' : ''
+          className={`p-1 hover:bg-[#323538] active:bg-[#1a1b1d] btn-press-effect text-white cursor-default rounded-none flex items-center justify-center ${
+            isSearchOpen ? 'bg-[#323538] ring-2 ring-white' : ''
           }`}
           title={isSearchOpen ? 'Close search' : 'Search all aspects of Craftmine'}
         >
           <img
-            src="https://static.wikia.nocookie.net/ep-deo/images/c/c8/MagnifyingGlass-52f96e5f47f42e682a00.png/revision/latest?cb=20260723030208"
+            src="https://img.itch.zone/aW1hZ2UvNDMzMzIwMS8yNTg2OTU0MS5wbmc=/original/pechXq.png"
             alt="Search"
             referrerPolicy="no-referrer"
-            className="w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain filter brightness-0 invert active:translate-y-[1px]"
+            className="w-4 h-4 sm:w-4.5 sm:h-4.5 object-contain [image-rendering:pixelated] active:translate-y-[1px]"
+            style={{ imageRendering: 'pixelated' }}
           />
         </button>
 

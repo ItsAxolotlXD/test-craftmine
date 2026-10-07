@@ -89,7 +89,7 @@ export const VplaySecondaryButton: React.FC<VplaySecondaryButtonProps> = ({
       onClick={handleClick}
       className={`
         relative select-none font-minecraft-seven overflow-hidden inline-flex items-center justify-center
-        border-2 border-[#141414] rounded-none cursor-pointer btn-press-effect
+        border-2 ${state === 'hovered' || state === 'pressed' ? 'border-white outline outline-2 outline-white -outline-offset-2 z-10' : 'border-[#141414]'} rounded-none cursor-default btn-press-effect
         ${stateClass}
         ${heightClass}
         ${padClasses}
@@ -101,7 +101,7 @@ export const VplaySecondaryButton: React.FC<VplaySecondaryButtonProps> = ({
       {...props}
     >
       <span
-        className={`inline-flex items-center justify-center gap-2 w-full truncate transition-transform duration-75 ${
+        className={`inline-flex items-center justify-center gap-2 w-full truncate ${
           state === 'pressed' ? 'translate-y-[2px]' : ''
         } ${
           state === 'hovered' || state === 'pressed'

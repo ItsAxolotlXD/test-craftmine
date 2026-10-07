@@ -79,13 +79,13 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToPlayCraftmine }) =
           return (
             <div
               key={faq.id}
-              className="bg-[#2b2d30] border-2 border-[#141414] shadow-md overflow-hidden transition-all duration-150"
+              className="bg-[#2b2d30] border-2 border-[#141414] shadow-md overflow-hidden"
             >
               {/* ACCORDION HEADER BUTTON (Sound plays on press down) */}
               <button
                 onMouseDown={() => playPopSound()}
                 onClick={() => toggleFaq(faq.id)}
-                className="w-full p-3 sm:p-3.5 flex items-center justify-between gap-3 text-left hover:bg-[#34373b] active:bg-[#252729] cursor-pointer select-none btn-press-effect"
+                className="w-full p-3 sm:p-3.5 flex items-center justify-between gap-3 text-left hover:bg-[#34373b] active:bg-[#252729] cursor-default select-none btn-press-effect"
               >
                 <div className="flex items-center gap-2.5 sm:gap-3 flex-1 min-w-0">
                   <span className="bg-[#141414] text-[#89dc69] font-minecraft-ten text-[10px] px-2 py-1 border border-[#383a3d] self-start sm:self-auto flex-shrink-0">
@@ -118,7 +118,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onGoToPlayCraftmine }) =
                       <button
                         onMouseDown={() => playPopSound()}
                         onClick={onGoToPlayCraftmine}
-                        className="inline-flex items-center gap-2 mc-button-normal border-2 border-[#141414] text-xs font-minecraft-seven px-3 py-1.5 cursor-pointer btn-press-effect"
+                        className="inline-flex items-center gap-2 mc-button-normal border-2 border-[#141414] text-xs font-minecraft-seven px-3 py-1.5 cursor-default btn-press-effect"
                       >
                         <span className="-translate-y-[0.5px]">▶ Play Craftmine right now</span>
                       </button>

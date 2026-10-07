@@ -23,6 +23,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Authentic Minecraft cursor: always default arrow cursor, never hand pointer */
+*,
+*::before,
+*::after,
+a,
+button,
+[role="button"],
+.cursor-pointer {
+  cursor: default !important;
+}
+
+/* Allow text selection cursor only on text inputs and textareas */
+input[type="text"],
+input[type="search"],
+input[type="number"],
+input[type="password"],
+textarea,
+.cursor-text {
+  cursor: text !important;
+}
+
+button:disabled,
+input:disabled,
+.mc-button-disabled,
+.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
 body {
   font-family: 'Minecraft Seven', monospace, sans-serif;
   font-weight: normal !important;
@@ -81,24 +109,33 @@ body {
   background-color: #c6c6c6;
   box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #565759;
   color: #4e5155; /* Text on light/white button is gray */
+  transition: none !important;
 }
 
-/* Hover: Turns vibrant Minecraft green with 1-layer bevel */
+/* Hover: Turns vibrant Minecraft green with 1-layer bevel and crisp white outline */
 .mc-button-hover,
 .mc-button:hover:not(:disabled),
 .mc-button-normal:hover:not(:disabled) {
   background-color: #418a28 !important;
   box-shadow: inset 2px 2px 0 #6bc34b, inset -2px -2px 0 #1e4511 !important;
   color: #ffffff !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
 }
 
-/* Press: Turns depressed dark Minecraft green */
+/* Press: Turns depressed dark Minecraft green with crisp white outline */
 .mc-button-pressed,
 .mc-button:active:not(:disabled),
 .mc-button-normal:active:not(:disabled) {
   background-color: #285718 !important;
   box-shadow: inset 2px 2px 0 #0f2409, inset -2px -2px 0 #418a28 !important;
   color: #ffffff !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
 }
 
 .mc-button-disabled,
@@ -107,8 +144,9 @@ body {
   background-color: #9da1a5 !important;
   box-shadow: inset 2px 2px 0 #b8bbbf, inset -2px -2px 0 #686a6e !important;
   color: #606367 !important;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
   opacity: 0.85;
+  outline: none !important;
 }
 
 /* Normal button style but dark - turns green on hover or press */
@@ -117,18 +155,49 @@ body {
   border: 2px solid #141414;
   box-shadow: inset 2px 2px 0 #54575b, inset -2px -2px 0 #202224;
   color: #ffffff;
+  transition: none !important;
 }
 
 .mc-button-dark:hover:not(:disabled) {
   background-color: #418a28 !important;
   box-shadow: inset 2px 2px 0 #6bc34b, inset -2px -2px 0 #1e4511 !important;
   color: #ffffff !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
 }
 
 .mc-button-dark:active:not(:disabled) {
   background-color: #285718 !important;
   box-shadow: inset 2px 2px 0 #0f2409, inset -2px -2px 0 #418a28 !important;
   color: #ffffff !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
+}
+
+/* General button white outline on hover and active states across the entire application */
+button:hover:not(:disabled),
+[role="button"]:hover:not([aria-disabled="true"]) {
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
+}
+
+button:active:not(:disabled),
+[role="button"]:active:not([aria-disabled="true"]) {
+  outline: 2px solid #ffffff !important;
+  outline-offset: -2px !important;
+  border-color: #ffffff !important;
+  transition: none !important;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  outline: none !important;
 }
 
 /* Authentic Minecraft Bedrock / Ore UI Search Box (as in IMG_0208) */
@@ -192,9 +261,25 @@ body {
   box-shadow: inset 2px 2px 0 #b8bbbf, inset -2px -2px 0 #686a6e;
 }
 
-/* Button Press Down Motion - Instant snappy response without animation */
-.btn-press-effect {
-  transition: background-color 0.05s ease, color 0.05s ease !important;
+/* Button Press Down Motion - Instant snappy response without animation / fade / cross dissolve */
+.btn-press-effect,
+button,
+button *,
+.mc-button-normal,
+.mc-button-normal *,
+.mc-button-dark,
+.mc-button-dark *,
+[role="button"],
+[role="button"] * {
+  transition: none !important;
+  animation-duration: 0s !important;
+}
+
+/* Category header & category background style matching image */
+.mc-category-bg,
+.mc-category-header {
+  background-color: #323436 !important;
+  border-bottom: 2px solid #141414;
 }
 
 /* Tab Bar Text Marquee Auto-Scroll Animation */
