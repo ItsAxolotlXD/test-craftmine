@@ -1,0 +1,342 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Minecraft Ten';
+  src: url('/fonts/MinecraftTen.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Minecraft Seven';
+  src: url('/fonts/MinecraftSeven.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Eliminate synthetic bold doubling on pixel fonts */
+* {
+  font-synthesis: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Minecraft Seven', monospace, sans-serif;
+  font-weight: normal !important;
+  letter-spacing: 0.02em;
+}
+
+/* Ensure Minecraft pixel fonts never get artificial thick/bloated strokes */
+.font-minecraft-ten,
+.font-minecraft-seven,
+.font-jura,
+.font-montserrat {
+  font-weight: normal !important;
+}
+
+@layer utilities {
+  .font-minecraft-ten {
+    font-family: 'Minecraft Ten', 'Press Start 2P', monospace;
+  }
+  .font-minecraft-seven {
+    font-family: 'Minecraft Seven', 'VT323', monospace;
+  }
+  .font-jura {
+    font-family: 'Minecraft Ten', 'Jura', sans-serif;
+  }
+  .font-montserrat {
+    font-family: 'Minecraft Seven', 'Montserrat', sans-serif;
+  }
+  .font-pixel {
+    font-family: 'Minecraft Seven', 'Pixelify Sans', sans-serif;
+  }
+  .font-press-start {
+    font-family: 'Minecraft Ten', sans-serif;
+  }
+  .font-silkscreen {
+    font-family: 'Minecraft Seven', sans-serif;
+  }
+  .font-vt323 {
+    font-family: 'Minecraft Seven', monospace;
+  }
+  .font-noto-sans {
+    font-family: 'Noto Sans', sans-serif;
+  }
+}
+
+/* Custom Pixel Art Bevel & Border styles */
+.pixel-border-dark {
+  border: 2px solid #141414;
+}
+
+.pixel-[#418a28] {
+  background-color: #418a28;
+}
+
+/* Authentic Minecraft Bedrock / Ore UI Button System (as in IMG_0206) */
+.mc-button-normal {
+  background-color: #c6c6c6;
+  box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #565759;
+  color: #4e5155; /* Text on light/white button is gray */
+}
+
+/* Hover: Turns vibrant Minecraft green with 1-layer bevel */
+.mc-button-hover,
+.mc-button:hover:not(:disabled),
+.mc-button-normal:hover:not(:disabled) {
+  background-color: #418a28 !important;
+  box-shadow: inset 2px 2px 0 #6bc34b, inset -2px -2px 0 #1e4511 !important;
+  color: #ffffff !important;
+}
+
+/* Press: Turns depressed dark Minecraft green */
+.mc-button-pressed,
+.mc-button:active:not(:disabled),
+.mc-button-normal:active:not(:disabled) {
+  background-color: #285718 !important;
+  box-shadow: inset 2px 2px 0 #0f2409, inset -2px -2px 0 #418a28 !important;
+  color: #ffffff !important;
+}
+
+.mc-button-disabled,
+.mc-button:disabled,
+.mc-button-normal:disabled {
+  background-color: #9da1a5 !important;
+  box-shadow: inset 2px 2px 0 #b8bbbf, inset -2px -2px 0 #686a6e !important;
+  color: #606367 !important;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+/* Normal button style but dark - turns green on hover or press */
+.mc-button-dark {
+  background-color: #383a3d;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 #54575b, inset -2px -2px 0 #202224;
+  color: #ffffff;
+}
+
+.mc-button-dark:hover:not(:disabled) {
+  background-color: #418a28 !important;
+  box-shadow: inset 2px 2px 0 #6bc34b, inset -2px -2px 0 #1e4511 !important;
+  color: #ffffff !important;
+}
+
+.mc-button-dark:active:not(:disabled) {
+  background-color: #285718 !important;
+  box-shadow: inset 2px 2px 0 #0f2409, inset -2px -2px 0 #418a28 !important;
+  color: #ffffff !important;
+}
+
+/* Authentic Minecraft Bedrock / Ore UI Search Box (as in IMG_0208) */
+.mc-search-box {
+  background-color: #4a4c4e;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 #232426, inset -2px -2px 0 #6c6f73;
+  color: #c0c3c7 !important; /* Text in search box is gray */
+  font-family: 'Minecraft Seven', 'VT323', monospace;
+}
+
+.mc-search-box::placeholder {
+  color: #8a8d92 !important; /* Placeholder in search box is gray */
+  font-family: 'Minecraft Seven', 'VT323', monospace;
+}
+
+.mc-search-box:focus {
+  outline: none;
+  border-color: #ffffff;
+  color: #d1d5db !important;
+}
+
+/* Authentic Minecraft Bedrock / Ore UI Dialog Window & Well (as in IMG_0210) */
+.mc-dialog-window {
+  background-color: #c6c6c6;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #565759, 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  color: #313131;
+  font-family: 'Minecraft Seven', 'VT323', monospace;
+}
+
+.mc-dialog-well {
+  background-color: #000000;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 #000000, inset -2px -2px 0 #585a5d;
+  color: #ffffff;
+  font-family: 'Minecraft Seven', 'VT323', monospace;
+}
+
+/* Description in a modal dialog message uses the Noto Sans font */
+.mc-dialog-well p,
+.mc-dialog-well .mc-dialog-desc,
+.mc-dialog-desc {
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  letter-spacing: normal !important;
+}
+
+.pixel-shadow-hero {
+  box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #565759;
+}
+
+.pixel-shadow-hero-hover {
+  box-shadow: inset 2px 2px 0 #6bc34b, inset -2px -2px 0 #1e4511;
+}
+
+.pixel-shadow-hero-pressed {
+  box-shadow: inset 2px 2px 0 #0f2409, inset -2px -2px 0 #418a28;
+}
+
+.pixel-shadow-hero-disabled {
+  box-shadow: inset 2px 2px 0 #b8bbbf, inset -2px -2px 0 #686a6e;
+}
+
+/* Button Press Down Motion - Instant snappy response without animation */
+.btn-press-effect {
+  transition: background-color 0.05s ease, color 0.05s ease !important;
+}
+
+/* Tab Bar Text Marquee Auto-Scroll Animation */
+@keyframes tab-marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(0%);
+  }
+  65% {
+    transform: translateX(calc(-100% + 80px));
+  }
+  80% {
+    transform: translateX(calc(-100% + 80px));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-tab-marquee {
+  animation: tab-marquee-scroll 6s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+}
+
+/* Custom Scanline FX for TV screen */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+}
+
+/* Minecraft Panorama Scrolling Keyframes - 3D accelerated for maximum smoothness */
+@keyframes minecraft-panorama-scroll {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-panorama {
+  animation: minecraft-panorama-scroll 75s linear infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at center, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.65) 100%);
+}
+
+/* Custom Ore UI / Secondary Button Styled Native Scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #25272a;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cdd1d4;
+  border: 2px solid #141414;
+  box-shadow: inset 2px 2px 0 #f4f6f8, inset -2px -4px 0 #9ea2a6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f4f6f8;
+  box-shadow: inset 2px 2px 0 #ffffff, inset -2px -4px 0 #b5b9bd;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #abafb3;
+  box-shadow: inset 2px 2px 0 #898d91, inset -1px -2px 0 #cdd1d4;
+}
+
+::-webkit-scrollbar-corner {
+  background: #141414;
+}
+
+/* Firefox scrollbar support */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #cdd1d4 #25272a;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tab White Border Running Animation (1 Lap around border ending at top-right) */
+@keyframes tab-border-run {
+  0% {
+    stroke-dasharray: 25 75;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  75% {
+    stroke-dasharray: 25 75;
+    stroke-dashoffset: -100;
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: -125;
+    opacity: 1;
+  }
+}
+
+.animate-tab-border-run {
+  animation: tab-border-run 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Modal Fade-In animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.12s ease-out forwards;
+}
